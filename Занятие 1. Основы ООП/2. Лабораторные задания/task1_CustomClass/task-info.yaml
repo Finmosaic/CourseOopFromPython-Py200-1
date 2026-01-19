@@ -9,6 +9,18 @@ files:
   - name: main1.py
     visible: true
     learner_created: true
+  - name: main6.py
+    visible: true
+    learner_created: true
+  - name: Bank-account.py
+    visible: true
+    learner_created: true
+  - name: Person.py
+    visible: true
+    learner_created: true
+  - name: Product.py
+    visible: true
+    learner_created: true
 status: Solved
 record: -1
 post_submission_on_open: true
