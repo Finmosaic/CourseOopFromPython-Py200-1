@@ -28,8 +28,7 @@ class Person:
 
     # ---------- validators ----------
 
-    @staticmethod
-    def _validate_name(name: str) -> str:
+    def _validate_name(self, name: str) -> str:
         """Проверка имени."""
         if not isinstance(name, str):
             raise TypeError("name должен быть строкой")
@@ -37,8 +36,7 @@ class Person:
             raise ValueError("name не может быть пустым")
         return name
 
-    @staticmethod
-    def _validate_age(age: int) -> int:
+    def _validate_age(self, age: int) -> int:
         """Проверка возраста."""
         if not isinstance(age, int):
             raise TypeError("age должен быть целым числом")
@@ -46,8 +44,7 @@ class Person:
             raise ValueError("age не может быть отрицательным")
         return age
 
-    @staticmethod
-    def _validate_email(email: str) -> str:
+    def _validate_email(self, email: str) -> str:
         """Проверка email."""
         if not isinstance(email, str):
             raise TypeError("email должен быть строкой")
@@ -93,3 +90,4 @@ class Person:
 
 if __name__ == "__main__":
     doctest.testmod()
+

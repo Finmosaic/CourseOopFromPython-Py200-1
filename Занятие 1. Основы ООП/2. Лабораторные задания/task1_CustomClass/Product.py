@@ -28,8 +28,7 @@ class Product:
 
     # ---------- validators ----------
 
-    @staticmethod
-    def _validate_name(name: str) -> str:
+    def _validate_name(self, name: str) -> str:
         """Проверка названия товара."""
         if not isinstance(name, str):
             raise TypeError("name должен быть строкой")
@@ -37,8 +36,7 @@ class Product:
             raise ValueError("name не может быть пустым")
         return name
 
-    @staticmethod
-    def _validate_price(price: float) -> float:
+    def _validate_price(self, price: float) -> float:
         """Проверка цены."""
         if not isinstance(price, (int, float)):
             raise TypeError("price должен быть числом")
@@ -46,8 +44,7 @@ class Product:
             raise ValueError("price не может быть отрицательной")
         return float(price)
 
-    @staticmethod
-    def _validate_quantity(quantity: int) -> int:
+    def _validate_quantity(self, quantity: int) -> int:
         """Проверка количества."""
         if not isinstance(quantity, int):
             raise TypeError("quantity должен быть целым числом")
@@ -96,3 +93,4 @@ class Product:
 
 if __name__ == "__main__":
     doctest.testmod()
+
