@@ -16,8 +16,8 @@ files:
               def add(a, b):
                   return a + b
         selected: false
-        status: Unchecked
-      - offset: 89
+        status: Solved
+      - offset: 291
         length: 63
         placeholder_text: "# TODO  Написать статический метод mul для умножения двух ч\
       исел"
@@ -30,7 +30,7 @@ files:
               def mul(a, b):
                   return a * b
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -41,5 +41,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 25 Jan 2026 14:46:06 UTC"
 record: -1

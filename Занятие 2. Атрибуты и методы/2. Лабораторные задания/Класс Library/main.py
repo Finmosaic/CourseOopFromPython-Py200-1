@@ -1,3 +1,4 @@
+from typing import Optional
 # База данных книг для проверки
 BOOKS_DATABASE = [
     {
@@ -14,17 +15,29 @@ BOOKS_DATABASE = [
 
 
 # TODO Импортируйте и скопируйте ранее написанный класс Book
-
+class Book:
+    def __init__(self, id_, name, pages):
+        # TODO дописать метод
+        self.id_ = id_
+        self.name = name
+        self.pages = pages
+    def __str__(self):
+        # TODO дописать метод
+        return f'Книга "{self.name}"'
+    def __repr__(self):
+        # TODO дописать метод
+        return f"Book(id_={self.id_}, name='{self.name}', pages={self.pages})"
 
 class Library:
 
-    def __init__(self, books):
+    def __init__(self, books: Optional[list[Book]] = None):
         """
         Не забудьте про 'Конструктор должен принимать необязательный аргумент со значением по умолчанию. Если пользователь
         его не передал, то библиотека инициализируется с пустым списком книг.'
         :param books:
         """
-        pass # TODO дописать метод
+        # TODO дописать метод
+        self.books = books if books is not None else []
 
     def get_next_book_id(self):
         """
@@ -32,8 +45,11 @@ class Library:
         значение после этого `id`
         :return:
         """
-        pass # TODO дописать метод
-
+        # TODO дописать метод
+        if not self.books:
+            return 1
+        else:
+            return max([book.id_ for book in self.books]) + 1
     def get_index_by_book_id(self, id_):
         """
         Так как в библиотеке книги хранятся в списке, то данная функция возвращает индекс где книга с определенным
@@ -42,8 +58,14 @@ class Library:
         :param id_: id книги
         :return: индекс, где лежит книга в списке книг
         """
-        pass # TODO дописать метод
+        # TODO дописать метод
+        for index, book in enumerate(self.books):
+            if book.id_ == id_:
+                return index
+        raise ValueError(f"Книга с id={id_} не найдена")
 
+    def __repr__(self) -> str:
+        return f"Library(books={self.books!r})"
 
 if __name__ == '__main__':
     empty_library = Library()  # инициализируем пустую библиотеку
@@ -56,3 +78,5 @@ if __name__ == '__main__':
     print(library_with_books.get_next_book_id())  # проверяем следующий id для непустой библиотеки
 
     print(library_with_books.get_index_by_book_id(1))  # проверяем индекс книги с id = 1
+    print(list_books)
+    print(library_with_books)

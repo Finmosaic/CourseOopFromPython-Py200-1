@@ -15,14 +15,16 @@ BOOKS_DATABASE = [
 
 class Book:
     def __init__(self, id_, name, pages):
-        pass # TODO дописать метод
-
+        # TODO дописать метод
+        self.id_ = id_
+        self.name = name
+        self.pages = pages
     def __str__(self):
-        pass # TODO дописать метод
-
+        # TODO дописать метод
+        return f'Книга "{self.name}"'
     def __repr__(self):
-        pass # TODO дописать метод
-
+        # TODO дописать метод
+        return f"Book(id_={self.id_}, name='{self.name}', pages={self.pages})"
 
 if __name__ == '__main__':
     # инициализируем список книг

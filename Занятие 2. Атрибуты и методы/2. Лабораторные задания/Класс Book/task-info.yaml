@@ -10,35 +10,38 @@ files:
     visible: true
     placeholders:
       - offset: 282
-        length: 26
+        length: 21
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 282
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 341
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 410
+        length: 21
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 341
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
-      - offset: 401
-        length: 26
+        selected: true
+        status: Solved
+      - offset: 502
+        length: 21
         placeholder_text: "pass # TODO дописать метод"
         initial_state:
           length: 26
           offset: 401
         initialized_from_dependency: false
         encrypted_possible_answer: pass
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 25 Jan 2026 18:47:02 UTC"
 record: -1
