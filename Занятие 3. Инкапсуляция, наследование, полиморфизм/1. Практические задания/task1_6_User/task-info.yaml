@@ -14,8 +14,8 @@ files:
           self.__password = password
                   self.__address = address
         selected: false
-        status: Unchecked
-      - offset: 322
+        status: Solved
+      - offset: 390
         length: 41
         placeholder_text: "# TODO если роль 'admin', то вернуть True"
         initial_state:
@@ -24,8 +24,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: return role == "admin"
         selected: false
-        status: Unchecked
-      - offset: 419
+        status: Solved
+      - offset: 518
         length: 169
         placeholder_text: "...  # TODO провести проверку доступа по роли, если прошла\
       , то вернуть пароль, если не прошел проверку, то вызвать исключение PermissionError\
@@ -40,7 +40,7 @@ files:
                   else:
                       raise PermissionError("Доступ запрещен")
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -51,5 +51,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 31 Jan 2026 12:04:35 UTC"
 record: -1

@@ -11,7 +11,7 @@ class Rectangle(Figure):
         # TODO вызвать конструктор базового класса с помощью super()
         self.a = a
         self.b = b
-
+        super().__init__(name)
 
 if __name__ == "__main__":
     rect = Rectangle(5, 10, 'rect_fig')

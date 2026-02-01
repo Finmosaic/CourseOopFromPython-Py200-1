@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 267
-        length: 126
+        length: 128
         placeholder_text: |-
           # TODO перепишите get_value и сделайте его свойством (getter) value
               def get_value(self) -> int:
@@ -17,9 +17,9 @@ files:
           @property
               def value(self) -> int:
                   return self._value
-        selected: false
-        status: Unchecked
-      - offset: 399
+        selected: true
+        status: Solved
+      - offset: 463
         length: 44
         placeholder_text: "# TODO  напишите свойство (getter) max_value"
         initial_state:
@@ -31,8 +31,8 @@ files:
               def max_value(self):
                   return self._max_value
         selected: false
-        status: Unchecked
-      - offset: 449
+        status: Solved
+      - offset: 583
         length: 83
         placeholder_text: "# TODO  напишите свойство (setter) max_value с проверками н\
       а входной тип и значение"
@@ -49,7 +49,7 @@ files:
                       raise ValueError()
                   self._max_value = value
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -60,5 +60,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 31 Jan 2026 10:56:02 UTC"
 record: -1
